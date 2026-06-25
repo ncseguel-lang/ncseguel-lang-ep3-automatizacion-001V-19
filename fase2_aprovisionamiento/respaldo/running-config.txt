@@ -1,0 +1,177 @@
+Building configuration...
+
+Current configuration : 3537 bytes
+!
+! Last configuration change at 21:18:52 UTC Thu Jun 25 2026
+!
+version 16.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform console virtual
+!
+hostname RTR-PLATCLD
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+ip domain name etw.netacad.com
+!
+!
+!
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2875626325
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2875626325
+ revocation-check none
+ rsakeypair TP-self-signed-2875626325
+!
+!
+crypto pki certificate chain TP-self-signed-2875626325
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 32383735 36323633 3235301E 170D3236 30363235 32303436 
+  34305A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 38373536 
+  32363332 35308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100ED7B 8688E5E4 05C9445C 39CD3737 36B86F98 CEA6CDB2 B6B2C156 
+  7BE69EA7 80249B42 3F4D597D 1EC4361A A4E068D6 4309387D 5D4B26AF 362D6C65 
+  EA288962 9FB84F52 FE186139 489E46E5 77C2A337 EC817259 A86EA979 FE73D17E 
+  A7B1DD80 FB6C665E 69D46584 97F7F996 20C5D26F 012893FA FB0253BD 130BD004 
+  A9C8ADA5 A82A284D 6898AFBA 5519D2EA C71CD7E6 CB62C34A 935C19C4 90BF3F67 
+  80702D5C B7F7AF04 94470FFA 44657394 E881B64F E75DAFEB CEB7FCF2 6C8CD21A 
+  2EAA10E8 6DA46800 A2A2C9E2 3615CEA8 F2EB97B1 34CC50ED 4D924E06 CD50ED76 
+  A0F247D6 97804586 C306AB69 72919B41 C78E69BE 91E39A21 3EEE174B 44E0A6BE 
+  FD2E2A06 88BF0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14776939 6751FE03 1904EF81 7E65202E A478D9FA 
+  96301D06 03551D0E 04160414 77693967 51FE0319 04EF817E 65202EA4 78D9FA96 
+  300D0609 2A864886 F70D0101 05050003 82010100 18E267F7 087FB62A 8D3E3D89 
+  340020AF 0B405FD2 BCEA76BA A23BFD30 5482F3DC C5EB5E1D 35C045D2 A4EB9A25 
+  C882CAD0 5AF21880 2C1E93F3 64F55315 787A2227 46EE2845 D990F57B 661460AF 
+  A275CB93 C07F8EE1 D62A10AD 61DAE172 F544E84B B9F3CA7B FA07DFD2 0CBC101E 
+  3DD3DE14 AE83E7C9 17C8FF55 9B3692DF 45D023DE 7FD5DA36 742FC189 4DAA6A6E 
+  50F5F4E8 27564C4D D79D3943 FB2823A0 6628871C 9D0608CD EDB74D50 925FF29F 
+  C51F0C14 C0504661 D97DF9EF 4F386FE6 1C791EE8 928C73EF EB260F2D 5E2F9B46 
+  A90A586F 84FE6649 E6396A9A BEAC0755 51B92720 69F3F1BC D6EB7C6B 019179EE 
+  4807F585 0CFD953D B9929C9C 6BDCD75D 5DBB987C
+  	quit
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9XVMBXPXQRZ
+no license smart enable
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+netconf-yang
+!
+restconf
+!
+username cisco privilege 15 password 0 cisco123!
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Loopback10
+ ip address 10.1.19.1 255.255.255.0
+!
+interface GigabitEthernet1
+ description Enlace-WAN-Curico
+ ip address dhcp
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+ip forward-protocol nd
+no ip http server
+ip http authentication local
+ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+banner motd ^CACCESO RESTRINGIDO - PLATCLD^C
+!
+line con 0
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+ntp server 9.9.9.9
+!
+!
+!
+!
+!
+end

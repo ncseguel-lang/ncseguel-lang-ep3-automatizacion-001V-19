@@ -1,0 +1,36 @@
+
+PLAY [Aprovisionamiento Plataforma Cloud] **************************************
+
+TASK [Backup running-config] ***************************************************
+ok: [csr1kv]
+
+TASK [Guardar backup] **********************************************************
+ok: [csr1kv]
+
+TASK [Configurar hostname] *****************************************************
+ok: [csr1kv]
+
+TASK [Configurar servidor NTP] *************************************************
+ok: [csr1kv]
+
+TASK [Configurar descripcion WAN] **********************************************
+ok: [csr1kv]
+
+TASK [Configurar Loopback10] ***************************************************
+ok: [csr1kv]
+
+TASK [Habilitar NETCONF] *******************************************************
+ok: [csr1kv]
+
+TASK [Habilitar RESTCONF] ******************************************************
+ok: [csr1kv]
+
+TASK [Habilitar HTTPS] *********************************************************
+ok: [csr1kv]
+
+TASK [Configurar banner MOTD] **************************************************
+ok: [csr1kv]
+
+PLAY RECAP *********************************************************************
+csr1kv                     : ok=10   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

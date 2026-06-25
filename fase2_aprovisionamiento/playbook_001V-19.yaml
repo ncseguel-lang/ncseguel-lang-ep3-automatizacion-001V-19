@@ -1,0 +1,62 @@
+---
+- name: Aprovisionamiento Plataforma Cloud
+  hosts: routers
+  gather_facts: no
+
+  vars_files:
+    - ../vars/vars_001V-19.yaml
+
+  tasks:
+
+    - name: Backup running-config
+      ios_command:
+        commands:
+          - show running-config
+      register: backup_cfg
+
+    - name: Guardar backup
+      copy:
+        content: "{{ backup_cfg.stdout[0] }}"
+        dest: "respaldo/running-config.txt"
+
+    - name: Configurar hostname
+      ios_config:
+        lines:
+          - "hostname {{ cliente.hostname }}"
+
+    - name: Configurar servidor NTP
+      ios_config:
+        lines:
+          - "ntp server {{ router.ntp_server }}"
+
+    - name: Configurar descripcion WAN
+      ios_config:
+        parents: "interface GigabitEthernet1"
+        lines:
+          - "description {{ router.descripcion_wan }}"
+
+    - name: Configurar Loopback10
+      ios_config:
+        parents: "interface Loopback10"
+        lines:
+          - "ip address {{ router.loopback_ip }} {{ router.loopback_mask }}"
+
+    - name: Habilitar NETCONF
+      ios_config:
+        lines:
+          - netconf-yang
+
+    - name: Habilitar RESTCONF
+      ios_config:
+        lines:
+          - restconf
+
+    - name: Habilitar HTTPS
+      ios_config:
+        lines:
+          - ip http secure-server
+
+    - name: Configurar banner MOTD
+      ios_config:
+        lines:
+          - "banner motd ^C{{ router.banner }}^C"
