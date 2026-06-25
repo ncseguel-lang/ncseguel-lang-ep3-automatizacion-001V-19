@@ -1,0 +1,9 @@
+[OK] Conexion NETCONF establecida
+[OK] XML guardado
+[OK] Hostname encontrado: RTR-PLATCLD
+[OK] Loopback10 encontrada
+[OK] IP Loopback correcta
+[OK] Servidor NTP encontrado
+[OK] Descripcion WAN encontrada
+
+RESULTADO: CONFORME
