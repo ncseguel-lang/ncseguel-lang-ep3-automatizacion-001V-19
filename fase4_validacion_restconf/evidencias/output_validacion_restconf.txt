@@ -1,0 +1,7 @@
+[OK] Hostname
+[OK] Interfaces
+[OK] NTP
+[OK] Loopback10
+
+4/4 OK
+CONFORME
