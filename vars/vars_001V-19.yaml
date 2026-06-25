@@ -1,0 +1,21 @@
+alumno:
+  codigo: "001V-19"
+  nombre: "Nicolas Eliseo Seguel Barrientos"
+
+cliente:
+  empresa: "Plataforma Cloud SpA"
+  hostname: "RTR-PLATCLD"
+
+router:
+  ip: "192.168.56.101"
+  usuario: "cisco"
+  password: "cisco123!"
+
+  loopback_id: 10
+  loopback_ip: "10.1.19.1"
+  loopback_mask: "255.255.255.0"
+  loopback_prefix: "24"
+
+  descripcion_wan: "Enlace-WAN-Curico"
+  banner: "ACCESO RESTRINGIDO - PLATCLD"
+  ntp_server: "9.9.9.9"
