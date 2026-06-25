@@ -1,0 +1,52 @@
+[2026-06-25 21:36:26,596] +++ CSR1kv logfile evidencias/snapshot_final_001V-19/connection_CSR1kv.txt +++
+[2026-06-25 21:36:26,596] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-25 21:36:26,689] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 140680077249024 +++
+[2026-06-25 21:36:26,690] connection to CSR1kv
+
+ACCESO RESTRINGIDO - PLATCLD
+
+RTR-PLATCLD#[2026-06-25 21:40:37,046] +++ CSR1kv logfile evidencias/snapshot_final_001V-19/connection_CSR1kv.txt +++
+[2026-06-25 21:40:37,046] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-25 21:40:37,102] +++ connection to spawn: ssh -l cisco -o KexAlgorithms=diffie-hellman-group14-sha1 192.168.56.101 22, id: 139643878276112 +++
+[2026-06-25 21:40:37,102] connection to CSR1kv
+
+ACCESO RESTRINGIDO - PLATCLD
+% 22 is not an open connectionConnection to 192.168.56.101 closed by remote host.
+[2026-06-25 21:43:47,861] +++ CSR1kv logfile evidencias/snapshot_final_001V-19/connection_CSR1kv.txt +++
+[2026-06-25 21:43:47,861] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-25 21:43:47,963] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 140318623718416 +++
+[2026-06-25 21:43:47,964] connection to CSR1kv
+
+ACCESO RESTRINGIDO - PLATCLD
+
+
+RTR-PLATCLD#[2026-06-25 21:47:10,383] +++ CSR1kv logfile evidencias/snapshot_final_001V-19/connection_CSR1kv.txt +++
+[2026-06-25 21:47:10,383] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-25 21:47:10,494] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 139819300416528 +++
+[2026-06-25 21:47:10,494] connection to CSR1kv
+
+ACCESO RESTRINGIDO - PLATCLD
+
+
+RTR-PLATCLD#[2026-06-25 21:58:13,828] +++ CSR1kv logfile evidencias/snapshot_final_001V-19/connection_CSR1kv.txt +++
+[2026-06-25 21:58:13,828] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-25 21:58:13,936] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 140020761865232 +++
+[2026-06-25 21:58:13,936] connection to CSR1kv
+
+ACCESO RESTRINGIDO - PLATCLD
+
+
+RTR-PLATCLD#[2026-06-25 22:04:47,528] +++ CSR1kv logfile evidencias/snapshot_final_001V-19/connection_CSR1kv.txt +++
+[2026-06-25 22:04:47,529] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-25 22:04:47,620] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 139793559952400 +++
+[2026-06-25 22:04:47,620] connection to CSR1kv
+
+
+
+RTR-PLATCLD#
